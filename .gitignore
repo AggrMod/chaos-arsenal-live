@@ -1,0 +1,30 @@
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables (if API keys added in future)
+.env
+.env.local
+.env.production
+
+# Temporary files
+*.tmp
+.cache/
+
+# Node modules (if build process added in future)
+node_modules/
+dist/
+build/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
