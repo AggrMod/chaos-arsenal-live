@@ -276,45 +276,9 @@ async function fetchCryptoNews() {
     }
 }
 
-/**
- * Simulate liquidation tracking (demo data)
- * Note: This uses simulated data for demonstration purposes
- */
-function trackLiquidations() {
-    const feed = document.getElementById('liquidationFeed');
-    const timestamp = new Date().toLocaleTimeString();
-
-    feed.innerHTML = `
-        <div style="color: #ff0000;">🔥 $127K BTC Long liquidated on Binance</div>
-        <div style="color: #ff0000;">💀 $89K ETH Short liquidated on OKX</div>
-        <div style="color: #ff4500;">⚡ $156K SOL Long liquidated on Bybit</div>
-        <div style="color: #ffd700; margin-top: 10px; text-align: center;">Total Liquidations (24h): $2.4B</div>
-        <div style="color: #00ffff; text-align: center; font-size: 0.8em;">Last scan: ${timestamp}</div>
-    `;
-
-    announceToScreenReader('Liquidation data refreshed - simulated data');
-}
-
-/**
- * Simulate whale tracking (demo data)
- * Note: This uses simulated data for demonstration purposes
- */
-function fetchWhaleData() {
-    const feed = document.getElementById('whaleFeed');
-    const timestamp = new Date().toLocaleTimeString();
-
-    feed.innerHTML = `
-        <div style="color: #00ff00;">🐋 5,000 BTC moved from unknown wallet</div>
-        <div style="color: #ffd700;">📊 $75M USDT transferred to Coinbase</div>
-        <div style="color: #ff4500;">⚠️ Large ETH accumulation detected</div>
-        <div style="color: #00ffff;">🎯 Institutional buy signal: SOL</div>
-        <div style="color: #00ffff; text-align: center; font-size: 0.8em; margin-top: 10px;">
-            Whale activity: ${timestamp}
-        </div>
-    `;
-
-    announceToScreenReader('Whale movement data refreshed - simulated data');
-}
+// Fake liquidation and whale tracking functions removed
+// All liquidation and large trade data available through AGGR.TRADE
+// NO FAKE SIGNALS POLICY
 
 /**
  * Start auto-refresh intervals

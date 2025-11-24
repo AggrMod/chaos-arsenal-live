@@ -7,7 +7,16 @@ A real-time cryptocurrency market data dashboard featuring live feeds from multi
 
 ## ✨ Features
 
-### Live Data Feeds
+### 100% Real Data Feeds - NO FAKE SIGNALS
+
+- **⚡ AGGR.TRADE Integration** - Complete live trading terminal
+  - Embedded full-featured trading terminal
+  - Real-time order flow from 16+ exchanges
+  - **✅ Live Liquidations** - Real liquidation data from exchanges
+  - **✅ Large Trade Tracking** - Whale trades and significant orders
+  - Volume aggregation and advanced charting
+  - WebSocket connections for instant updates
+
 - **📈 Real-Time Market Prices** - Live cryptocurrency prices from CoinGecko API
   - Bitcoin, Ethereum, Solana, Cardano, Polkadot
   - 24-hour price changes with visual indicators
@@ -22,16 +31,6 @@ A real-time cryptocurrency market data dashboard featuring live feeds from multi
   - Powered by CryptoCompare API
   - Top 5 most recent articles
   - Auto-refresh every 5 minutes
-
-- **⚡ AGGR.TRADE Integration** - Live trading view
-  - Embedded full-featured trading terminal
-  - Real-time order flow from 17+ exchanges
-
-### Demo Features (Simulated Data)
-> ⚠️ **Note**: The following features currently display simulated data for demonstration purposes:
-
-- **💀 Liquidations Tracker** - Sample liquidation events
-- **🐋 Whale Movements** - Sample large transaction alerts
 
 ## 🚀 Quick Start
 
@@ -60,23 +59,29 @@ Visit `http://localhost:8000` in your browser.
 - **Vercel**: Connect your repository
 - **Any static host**: Upload `index.html`
 
-## 🔌 API Integration
+## 🔌 Data Sources
 
-### APIs Used (No Keys Required)
+### Real-Time APIs (No Keys Required)
 
-| API | Endpoint | Purpose | Rate Limit |
-|-----|----------|---------|------------|
-| **CoinGecko** | `api.coingecko.com/api/v3` | Cryptocurrency prices | 10-50 calls/min |
-| **Alternative.me** | `api.alternative.me/fng/` | Fear & Greed Index | Unlimited |
-| **CryptoCompare** | `min-api.cryptocompare.com` | Crypto news | ~100,000 calls/month |
-| **AGGR.TRADE** | `aggr.trade` | Trading terminal | N/A (iframe) |
+| Source | Type | Data Provided | Update Frequency |
+|--------|------|---------------|------------------|
+| **AGGR.TRADE** | WebSocket | Live trades, liquidations, large orders from 16+ exchanges | Real-time |
+| **CoinGecko** | REST API | Cryptocurrency prices & 24h changes | 30 seconds |
+| **Alternative.me** | REST API | Fear & Greed Index | 60 seconds |
+| **CryptoCompare** | REST API | Latest crypto news | 5 minutes |
 
-### Future API Integration
+### About AGGR.TRADE
 
-To enable real liquidation and whale tracking data, consider:
+AGGR is an open-source cryptocurrency trade aggregator that:
+- Connects to 16+ exchanges via WebSocket
+- Shows **real-time liquidations** as they happen
+- Tracks **large trades (whales)** automatically
+- Aggregates volume and provides advanced charting
+- Requires **no API keys** for basic usage
 
-- **Coinglass API** - For real liquidation data (requires API key)
-- **Whale Alert API** - For whale transactions (requires API key)
+**Supported Exchanges**: Binance, Coinbase, BitMEX, Bitfinex, Kraken, Bybit, Deribit, OKX, Gate.io, Huobi, and more.
+
+Learn more: [github.com/Tucsky/aggr](https://github.com/Tucsky/aggr)
 
 ## 🎨 Customization
 
@@ -182,7 +187,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This dashboard is for informational purposes only. Cryptocurrency trading carries risk. Always do your own research before making investment decisions.
 
-- Real-time data may have slight delays
+**Data Policy:**
+- ✅ 100% real market data - **NO FAKE SIGNALS**
+- ✅ All liquidations and large trades from AGGR.TRADE are real
+- ✅ Live API connections to exchanges and data providers
+- Real-time data may have slight delays depending on exchange API
 - API availability depends on third-party services
 - No financial advice is provided
 

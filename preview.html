@@ -322,53 +322,34 @@ body {
             </button>
         </article>
 
-        <!-- Live Liquidations (Demo) -->
+        <!-- AGGR Info Card -->
         <article class="chaos-card">
-            <h2 class="card-title">💀 LIVE LIQUIDATIONS TRACKER</h2>
-            <div class="demo-disclaimer" role="note">
-                ⚠️ DEMO: Simulated data for demonstration purposes
-            </div>
+            <h2 class="card-title">💀 LIQUIDATIONS & WHALE TRADES</h2>
             <div class="real-api-status">
-                <div class="status-dot status-simulated" role="img" aria-label="Simulated data indicator"></div>
-                <span>Liquidation Feed: DEMO MODE</span>
+                <div class="status-dot status-live" role="img" aria-label="AGGR connection status"></div>
+                <span>Available in AGGR.TRADE</span>
             </div>
             <div
                 class="live-feed"
-                id="liquidationFeed"
                 role="region"
-                aria-label="Liquidation tracker demo">
-                <div style="color: #ffd700;">Scanning for liquidations > $50K...</div>
+                aria-label="AGGR features information"
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                <div style="color: #00ff00; font-size: 1.2em; margin-bottom: 20px;">
+                    ✅ Real-Time Liquidations<br>
+                    ✅ Large Trade Tracking<br>
+                    ✅ 16+ Exchange Feeds<br>
+                    ✅ Volume Aggregation
+                </div>
+                <div style="color: #ffd700; font-size: 0.9em;">
+                    All liquidation and whale trade data is available through AGGR.TRADE's live feed above.
+                    Open the full terminal to access these features.
+                </div>
             </div>
             <button
                 class="chaos-button"
-                onclick="trackLiquidations()"
-                aria-label="Refresh liquidation data (simulated)">
-                💀 TRACK LIQUIDATIONS
-            </button>
-        </article>
-
-        <!-- Whale Movements (Demo) -->
-        <article class="chaos-card">
-            <h2 class="card-title">🐋 WHALE MOVEMENT ALERTS</h2>
-            <div class="demo-disclaimer" role="note">
-                ⚠️ DEMO: Simulated data for demonstration purposes
-            </div>
-            <div class="real-api-status">
-                <div class="status-dot status-simulated" role="img" aria-label="Simulated data indicator"></div>
-                <span>Whale Alert: DEMO MODE</span>
-            </div>
-            <div
-                class="live-feed"
-                id="whaleFeed"
-                role="region"
-                aria-label="Whale movement alerts demo">
-                <div style="color: #00ffff;">Monitoring large transactions...</div>
-            </div>
-            <button
-                class="chaos-button"
-                onclick="fetchWhaleData()"
-                aria-label="Refresh whale movement data (simulated)">
-                🐋 SCAN WHALES
+                onclick="window.open('https://aggr.trade', '_blank')"
+                aria-label="Open AGGR for liquidations and whale trades">
+                📊 VIEW IN AGGR.TRADE
             </button>
         </article>
 
@@ -428,11 +409,10 @@ body {
     <footer class="footer" role="contentinfo">
         🌸 Built with REAL DATA and LOVE for givenflowers.org 🌸<br>
         <div style="font-size: 0.8em; margin-top: 10px; opacity: 0.8;">
-            "Real market data from live APIs - with smart auto-refresh!" - CHAOS ENGINE 2025
+            "100% Real market data from live APIs - NO FAKE SIGNALS!" - CHAOS ENGINE 2025
         </div>
         <div style="font-size: 0.7em; margin-top: 15px; opacity: 0.6;">
-            Note: Liquidations and Whale Movement features display simulated data for demonstration.
-            <br>All other data feeds are live from real APIs.
+            Data Sources: AGGR.TRADE (Liquidations, Trades) | CoinGecko (Prices) | Alternative.me (Fear & Greed) | CryptoCompare (News)
         </div>
     </footer>
 
@@ -717,45 +697,9 @@ async function fetchCryptoNews() {
     }
 }
 
-/**
- * Simulate liquidation tracking (demo data)
- * Note: This uses simulated data for demonstration purposes
- */
-function trackLiquidations() {
-    const feed = document.getElementById('liquidationFeed');
-    const timestamp = new Date().toLocaleTimeString();
-
-    feed.innerHTML = `
-        <div style="color: #ff0000;">🔥 $127K BTC Long liquidated on Binance</div>
-        <div style="color: #ff0000;">💀 $89K ETH Short liquidated on OKX</div>
-        <div style="color: #ff4500;">⚡ $156K SOL Long liquidated on Bybit</div>
-        <div style="color: #ffd700; margin-top: 10px; text-align: center;">Total Liquidations (24h): $2.4B</div>
-        <div style="color: #00ffff; text-align: center; font-size: 0.8em;">Last scan: ${timestamp}</div>
-    `;
-
-    announceToScreenReader('Liquidation data refreshed - simulated data');
-}
-
-/**
- * Simulate whale tracking (demo data)
- * Note: This uses simulated data for demonstration purposes
- */
-function fetchWhaleData() {
-    const feed = document.getElementById('whaleFeed');
-    const timestamp = new Date().toLocaleTimeString();
-
-    feed.innerHTML = `
-        <div style="color: #00ff00;">🐋 5,000 BTC moved from unknown wallet</div>
-        <div style="color: #ffd700;">📊 $75M USDT transferred to Coinbase</div>
-        <div style="color: #ff4500;">⚠️ Large ETH accumulation detected</div>
-        <div style="color: #00ffff;">🎯 Institutional buy signal: SOL</div>
-        <div style="color: #00ffff; text-align: center; font-size: 0.8em; margin-top: 10px;">
-            Whale activity: ${timestamp}
-        </div>
-    `;
-
-    announceToScreenReader('Whale movement data refreshed - simulated data');
-}
+// Fake liquidation and whale tracking functions removed
+// All liquidation and large trade data available through AGGR.TRADE
+// NO FAKE SIGNALS POLICY
 
 /**
  * Start auto-refresh intervals
